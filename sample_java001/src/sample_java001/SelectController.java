@@ -197,18 +197,11 @@ public class SelectController implements Initializable {
 
 	}
 
-//	@FXML
-//	public void bt_man1_OnMouseClicked(){
-//		param[0] = "image_man1.png";
-//		pset.setParam(param);
-//	}
-
-
-
 	@FXML
 	public void bt_man1_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man1;
+		param[1] = "man1";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -219,6 +212,7 @@ public class SelectController implements Initializable {
 	public void bt_man2_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man2;
+		param[1] = "man2";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -229,6 +223,7 @@ public class SelectController implements Initializable {
 	public void bt_man3_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man3;
+		param[1] = "man3";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -239,6 +234,7 @@ public class SelectController implements Initializable {
 	public void bt_man4_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man4;
+		param[1] = "man4";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -249,6 +245,7 @@ public class SelectController implements Initializable {
 	public void bt_man5_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man5;
+		param[1] = "man5";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -259,6 +256,7 @@ public class SelectController implements Initializable {
 	public void bt_man6_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man6;
+		param[1] = "man6";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -269,6 +267,7 @@ public class SelectController implements Initializable {
 	public void bt_man7_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man7;
+		param[1] = "man7";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -279,6 +278,7 @@ public class SelectController implements Initializable {
 	public void bt_man8_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man8;
+		param[1] = "man8";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -289,6 +289,7 @@ public class SelectController implements Initializable {
 	public void bt_man9_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_man9;
+		param[1] = "man9";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -299,6 +300,7 @@ public class SelectController implements Initializable {
 	public void bt_pin1_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin1;
+		param[1] = "pin1";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -309,6 +311,7 @@ public class SelectController implements Initializable {
 	public void bt_pin2_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin2;
+		param[1] = "pin2";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -319,6 +322,7 @@ public class SelectController implements Initializable {
 	public void bt_pin3_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin3;
+		param[1] = "pin3";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -329,6 +333,7 @@ public class SelectController implements Initializable {
 	public void bt_pin4_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin4;
+		param[1] = "pin4";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -339,6 +344,7 @@ public class SelectController implements Initializable {
 	public void bt_pin5_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin5;
+		param[1] = "pin5";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -349,6 +355,7 @@ public class SelectController implements Initializable {
 	public void bt_pin6_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin6;
+		param[1] = "pin6";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -359,6 +366,7 @@ public class SelectController implements Initializable {
 	public void bt_pin7_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin7;
+		param[1] = "pin7";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -369,6 +377,7 @@ public class SelectController implements Initializable {
 	public void bt_pin8_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin8;
+		param[1] = "pin8";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -379,6 +388,7 @@ public class SelectController implements Initializable {
 	public void bt_pin9_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pin9;
+		param[1] = "pin9";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -389,6 +399,7 @@ public class SelectController implements Initializable {
 	public void bt_sou1_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou1;
+		param[1] = "sou1";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -399,6 +410,7 @@ public class SelectController implements Initializable {
 	public void bt_sou2_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou2;
+		param[1] = "sou2";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -409,6 +421,7 @@ public class SelectController implements Initializable {
 	public void bt_sou3_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou3;
+		param[1] = "sou3";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -419,6 +432,7 @@ public class SelectController implements Initializable {
 	public void bt_sou4_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou4;
+		param[1] = "sou4";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -429,6 +443,7 @@ public class SelectController implements Initializable {
 	public void bt_sou5_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou5;
+		param[1] = "sou5";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -439,6 +454,7 @@ public class SelectController implements Initializable {
 	public void bt_sou6_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou6;
+		param[1] = "sou6";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -449,6 +465,7 @@ public class SelectController implements Initializable {
 	public void bt_sou7_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou7;
+		param[1] = "sou7";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -459,6 +476,7 @@ public class SelectController implements Initializable {
 	public void bt_sou8_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou8;
+		param[1] = "sou8";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -469,6 +487,7 @@ public class SelectController implements Initializable {
 	public void bt_sou9_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sou9;
+		param[1] = "sou9";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -479,6 +498,7 @@ public class SelectController implements Initializable {
 	public void bt_ton_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_ton;
+		param[1] = "ton";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -489,6 +509,7 @@ public class SelectController implements Initializable {
 	public void bt_nan_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_nan;
+		param[1] = "nan";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -499,6 +520,7 @@ public class SelectController implements Initializable {
 	public void bt_sha_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_sha;
+		param[1] = "sha";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -509,6 +531,7 @@ public class SelectController implements Initializable {
 	public void bt_pei_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_pei;
+		param[1] = "pei";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -519,6 +542,7 @@ public class SelectController implements Initializable {
 	public void bt_haku_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_haku;
+		param[1] = "haku";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -529,6 +553,7 @@ public class SelectController implements Initializable {
 	public void bt_hatu_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_hatu;
+		param[1] = "hatu";
 		pset.setParam(param);
 
 		//画面を閉じる
@@ -539,6 +564,7 @@ public class SelectController implements Initializable {
 	public void bt_chun_OnMouseClicked(ActionEvent event){
 
 		param[0] = filename_chun;
+		param[1] = "chun";
 		pset.setParam(param);
 
 		//画面を閉じる

@@ -8,8 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -75,9 +75,15 @@ public class MainController  implements Initializable {
 	@FXML ImageView imv_uradora = new ImageView();
 
 	//コンボボックス
-	@FXML ComboBox<String> combo_PorC = new ComboBox<String>();
+	@FXML ComboBox<String> combo_fwind = new ComboBox<String>();
 	@FXML ComboBox<String> combo_wind = new ComboBox<String>();
+	@FXML ComboBox<String> combo_PorC = new ComboBox<String>();
+	@FXML ComboBox<String> combo_mati = new ComboBox<String>();
 	@FXML ComboBox<String> combo_agari = new ComboBox<String>();
+
+	//チェックボックス
+	@FXML CheckBox checkbox_reach = new CheckBox();
+	@FXML CheckBox checkbox_one = new CheckBox();
 
 	//サブ画面用パラメータ
 	private String[] param = new String[100];
@@ -101,6 +107,23 @@ public class MainController  implements Initializable {
 	Boolean flg_akan4 = false;
 	Boolean flg_mkan4 = false;
 
+	Hai hai1 = new Hai();
+	Hai hai2 = new Hai();
+	Hai hai3 = new Hai();
+	Hai hai4 = new Hai();
+	Hai hai5 = new Hai();
+	Hai hai6 = new Hai();
+	Hai hai7 = new Hai();
+	Hai hai8 = new Hai();
+	Hai hai9 = new Hai();
+	Hai hai10 = new Hai();
+	Hai hai11 = new Hai();
+	Hai hai12 = new Hai();
+	Hai hai13 = new Hai();
+	Hai hai14 = new Hai();
+	Hai hai_dora = new Hai();
+	Hai hai_uradora = new Hai();
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -109,12 +132,23 @@ public class MainController  implements Initializable {
 		String child = "子";
 		combo_PorC.getItems().addAll(oya,child);
 
-		//コンボボックス　自風
+		//コンボボックス　場風・自風
 		String ton = "東";
 		String nan = "南";
 		String sha = "西";
 		String pei = "北";
+		combo_fwind.getItems().addAll(ton,nan,sha,pei);
 		combo_wind.getItems().addAll(ton,nan,sha,pei);
+
+
+		//コンボボックス　待ち
+		String ryanmen = "リャンメン";
+		String shabo = "シャボ";
+		String penchan = "ペンチャン";
+		String kanchan = "カンチャン";
+		String tanki = "タンキ";
+		String nobetan = "ノベタン";
+		combo_mati.getItems().addAll(ryanmen,shabo,penchan,kanchan,tanki,nobetan);
 
 		//コンボボックス　和了
 		String ron = "ロン";
@@ -180,12 +214,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai1.setImage(im_man);
+		hai1.selectHai(button_hai1, imv_hai1, haiId, imFileName);
 	}
 
 	@FXML
@@ -197,12 +229,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai2.setImage(im_man);
+		hai2.selectHai(button_hai2, imv_hai2, haiId, imFileName);
 	}
 
 	@FXML
@@ -214,12 +244,11 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai3.setImage(im_man);
+		hai3.selectHai(button_hai3, imv_hai3, haiId, imFileName);
+
 	}
 
 	@FXML
@@ -231,12 +260,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai4.setImage(im_man);
+		hai4.selectHai(button_hai4, imv_hai4, haiId, imFileName);
 	}
 
 	@FXML
@@ -248,12 +275,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai5.setImage(im_man);
+		hai5.selectHai(button_hai5, imv_hai5, haiId, imFileName);
 	}
 
 	@FXML
@@ -265,12 +290,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai6.setImage(im_man);
+		hai6.selectHai(button_hai6, imv_hai6, haiId, imFileName);
 	}
 
 	@FXML
@@ -282,12 +305,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai7.setImage(im_man);
+		hai7.selectHai(button_hai7, imv_hai7, haiId, imFileName);
 	}
 
 	@FXML
@@ -299,12 +320,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai8.setImage(im_man);
+		hai8.selectHai(button_hai8, imv_hai8, haiId, imFileName);
 	}
 
 	@FXML
@@ -316,12 +335,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai9.setImage(im_man);
+		hai9.selectHai(button_hai9, imv_hai9, haiId, imFileName);
 	}
 
 	@FXML
@@ -333,12 +350,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai10.setImage(im_man);
+		hai10.selectHai(button_hai10, imv_hai10, haiId, imFileName);
 	}
 
 	@FXML
@@ -350,12 +365,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai11.setImage(im_man);
+		hai11.selectHai(button_hai11, imv_hai11, haiId, imFileName);
 	}
 
 	@FXML
@@ -367,12 +380,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai12.setImage(im_man);
+		hai12.selectHai(button_hai12, imv_hai12, haiId, imFileName);
 	}
 
 	@FXML
@@ -384,12 +395,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai13.setImage(im_man);
+		hai13.selectHai(button_hai13, imv_hai13, haiId, imFileName);
 	}
 
 	@FXML
@@ -401,12 +410,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_hai14.setImage(im_man);
+		hai14.selectHai(button_hai14, imv_hai14, haiId, imFileName);
 	}
 
 	@FXML
@@ -418,12 +425,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_dora.setImage(im_man);
+		hai_dora.selectHai(button_dora, imv_dora, haiId, imFileName);
 	}
 
 	@FXML
@@ -435,12 +440,10 @@ public class MainController  implements Initializable {
 		//サブ画面パラメータ受け取り
 		param = pset.getParam();
 		String imFileName = param[0];
-
-		//選択牌IDを設定
+		String haiId = param[1];
 
 		//選択牌を設定
-		Image im_man = new Image(imFileName);
-		imv_uradora.setImage(im_man);
+		hai_uradora.selectHai(button_uradora, imv_uradora, haiId, imFileName);
 	}
 
 	@FXML
@@ -934,6 +937,198 @@ public class MainController  implements Initializable {
 	@FXML
 	public void button_calc_OnMouseCliceked(){
 		System.out.println("calc");
+		TeHai tehai = new TeHai();
+
+		//値をセット
+		tehai.setPorc(combo_PorC.getValue());
+		tehai.setWind(combo_wind.getValue());
+		tehai.setDora(hai_dora.getSelectHaiId());
+		tehai.setUradora(hai_uradora.getSelectHaiId());
+		tehai.setReach(checkbox_reach.isSelected());
+		tehai.setOne(checkbox_one.isSelected());
+		tehai.setAgari(combo_agari.getValue());
+
+		if(flg_pon1 == true){
+			tehai.getMentsu1().setNaki("ポン");
+		}else if(flg_tii1 == true){
+			tehai.getMentsu1().setNaki("チー");
+		}else if(flg_akan1 == true){
+			tehai.getMentsu1().setNaki("暗カン");
+		}else if(flg_mkan1 == true){
+			tehai.getMentsu1().setNaki("明カン");
+		}else{
+			tehai.getMentsu1().setNaki("無");
+		}
+
+		tehai.getMentsu1().setHai1(hai1.getSelectHaiId());
+		tehai.getMentsu1().setHai2(hai2.getSelectHaiId());
+		tehai.getMentsu1().setHai3(hai3.getSelectHaiId());
+
+		if(flg_pon2 == true){
+			tehai.getMentsu2().setNaki("ポン");
+		}else if(flg_tii2 == true){
+			tehai.getMentsu2().setNaki("チー");
+		}else if(flg_akan2 == true){
+			tehai.getMentsu2().setNaki("暗カン");
+		}else if(flg_mkan2 == true){
+			tehai.getMentsu2().setNaki("明カン");
+		}else{
+			tehai.getMentsu2().setNaki("無");
+		}
+
+		tehai.getMentsu2().setHai1(hai4.getSelectHaiId());
+		tehai.getMentsu2().setHai2(hai5.getSelectHaiId());
+		tehai.getMentsu2().setHai3(hai6.getSelectHaiId());
+
+		if(flg_pon3 == true){
+			tehai.getMentsu3().setNaki("ポン");
+		}else if(flg_tii3 == true){
+			tehai.getMentsu3().setNaki("チー");
+		}else if(flg_akan3 == true){
+			tehai.getMentsu3().setNaki("暗カン");
+		}else if(flg_mkan3 == true){
+			tehai.getMentsu3().setNaki("明カン");
+		}else{
+			tehai.getMentsu3().setNaki("無");
+		}
+
+		tehai.getMentsu3().setHai1(hai7.getSelectHaiId());
+		tehai.getMentsu3().setHai2(hai8.getSelectHaiId());
+		tehai.getMentsu3().setHai3(hai9.getSelectHaiId());
+
+		if(flg_pon4 == true){
+			tehai.getMentsu4().setNaki("ポン");
+		}else if(flg_tii4 == true){
+			tehai.getMentsu4().setNaki("チー");
+		}else if(flg_akan4 == true){
+			tehai.getMentsu4().setNaki("暗カン");
+		}else if(flg_mkan4 == true){
+			tehai.getMentsu4().setNaki("明カン");
+		}else{
+			tehai.getMentsu4().setNaki("無");
+		}
+
+		tehai.getMentsu4().setHai1(hai10.getSelectHaiId());
+		tehai.getMentsu4().setHai2(hai11.getSelectHaiId());
+		tehai.getMentsu4().setHai3(hai12.getSelectHaiId());
+
+		tehai.setAtama1(hai13.getSelectHaiId());
+		tehai.setAtama1(hai14.getSelectHaiId());
+
+		//デバッグログ
+		System.out.println(tehai.getPorc());
+		System.out.println(tehai.getWind());
+		System.out.println(tehai.getDora());
+		System.out.println(tehai.getUradora());
+		System.out.println(tehai.getReach());
+		System.out.println(tehai.getOne());
+		System.out.println(tehai.getAgari());
+		System.out.println(tehai.getMentsu1().getNaki());
+		System.out.println(tehai.getMentsu1().getHai1());
+		System.out.println(tehai.getMentsu1().getHai2());
+		System.out.println(tehai.getMentsu1().getHai3());
+		System.out.println(tehai.getMentsu2().getNaki());
+		System.out.println(tehai.getMentsu2().getHai1());
+		System.out.println(tehai.getMentsu2().getHai2());
+		System.out.println(tehai.getMentsu2().getHai3());
+		System.out.println(tehai.getMentsu3().getNaki());
+		System.out.println(tehai.getMentsu3().getHai1());
+		System.out.println(tehai.getMentsu3().getHai2());
+		System.out.println(tehai.getMentsu3().getHai3());
+		System.out.println(tehai.getMentsu4().getNaki());
+		System.out.println(tehai.getMentsu4().getHai1());
+		System.out.println(tehai.getMentsu4().getHai2());
+		System.out.println(tehai.getMentsu4().getHai3());
+		System.out.println(tehai.getAtama1());
+		System.out.println(tehai.getAtama1());
+
+		/*-------------------*/
+		/*符計算             */
+		/*-------------------*/
+		int hu_hutei=0;
+		int hu_agari=0;
+		int hu_mentsu=0;
+		int hu_mentsu1=0;
+		int hu_mentsu2=0;
+		int hu_mentsu3=0;
+		int hu_mentsu4=0;
+
+		//副底（フーテイ）＝基本符
+		hu_hutei = 20;
+
+		//門前加符（メンゼンカフ）と ツモ符（ツモフ）
+		/*メンゼンロンの場合*/
+		if(
+				tehai.getAgari()=="ロン" &&
+				flg_pon1==false &&
+				flg_tii1==false &&
+				flg_mkan1==false &&
+				flg_pon2==false &&
+				flg_tii2==false &&
+				flg_mkan2==false &&
+				flg_pon3==false &&
+				flg_tii3==false &&
+				flg_mkan3==false &&
+				flg_pon4==false &&
+				flg_tii4==false &&
+				flg_mkan4==false
+				){
+			hu_agari = 10;
+		}
+
+		/*ツモの場合（ピンフの場合なし_未実装）*/
+		else if(tehai.getAgari()=="ツモ"){
+			hu_agari = 2;
+		}
+
+		//各面子（メンツ）の種類による 加符点
+		//メンツ１
+		/*順子(シュンツ)の場合*/
+		if(	tehai.getMentsu1().getHai1() != tehai.getMentsu1().getHai2()){
+			hu_mentsu1=0;
+		}else{
+			hu_mentsu1 = calc_Mentsu(tehai.getMentsu1());
+		}
+
+		//メンツ２
+		/*順子(シュンツ)の場合*/
+		if(	tehai.getMentsu2().getHai1() != tehai.getMentsu2().getHai2()){
+			hu_mentsu2=0;
+		}else{
+			hu_mentsu2 = calc_Mentsu(tehai.getMentsu2());
+		}
+
+		//メンツ３
+		/*順子(シュンツ)の場合*/
+		if(	tehai.getMentsu3().getHai1() != tehai.getMentsu3().getHai2()){
+			hu_mentsu3=0;
+		}else{
+			hu_mentsu3 = calc_Mentsu(tehai.getMentsu3());
+		}
+
+		//メンツ４
+		/*順子(シュンツ)の場合*/
+		if(	tehai.getMentsu4().getHai1() != tehai.getMentsu4().getHai2()){
+			hu_mentsu4=0;
+		}else{
+			hu_mentsu4 = calc_Mentsu(tehai.getMentsu4());
+		}
+
+		hu_mentsu = hu_mentsu1 + hu_mentsu2 + hu_mentsu3 + hu_mentsu4;
+System.out.println(hu_mentsu1);
+System.out.println(hu_mentsu2);
+System.out.println(hu_mentsu3);
+System.out.println(hu_mentsu4);
+System.out.println(hu_mentsu);
+
+
+
+
+
+
+
+
+
 
 	}
 
@@ -959,6 +1154,73 @@ public class MainController  implements Initializable {
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
+	}
+
+	private int calc_Mentsu(Mentsu mentsu){
+
+		int hu = 0;
+
+		String flg = mentsu.getHai1().substring(3);
+		if(
+				flg.equals("2") ||
+				flg.equals("3") ||
+				flg.equals("4") ||
+				flg.equals("5") ||
+				flg.equals("6") ||
+				flg.equals("7") ||
+				flg.equals("8")
+				){
+
+			/*2～8　明刻(ミンコ)の場合*/
+			if(mentsu.getNaki() == "ポン"){
+				hu=2;
+			}
+
+			/*2～8　暗刻(アンコ)の場合*/
+			else if(mentsu.getNaki() == "無" &&
+					mentsu.getHai1() == mentsu.getHai2()){
+				hu=4;
+			}
+
+			/*2～8　明槓(ミンカン)の場合*/
+			else if(mentsu.getNaki() == "明カン" &&
+					mentsu.getHai1() == mentsu.getHai2()){
+				hu=8;
+			}
+
+			/*2～8　暗槓(アンカン)の場合*/
+			else if(mentsu.getNaki() == "暗カン" &&
+					mentsu.getHai1() == mentsu.getHai2()){
+				hu=16;
+			}
+
+		}else{
+			/*1・9・字牌　明刻(ミンコ)の場合*/
+			if(mentsu.getNaki() == "ポン"){
+				hu=4;
+			}
+
+			/*1・9・字牌　暗刻(アンコ)の場合*/
+			else if(mentsu.getNaki() == "無" &&
+					mentsu.getHai1() == mentsu.getHai2()){
+				hu=8;
+			}
+
+			/*1・9・字牌　明槓(ミンカン)の場合*/
+			else if(mentsu.getNaki() == "明カン" &&
+					mentsu.getHai1() == mentsu.getHai2()){
+				hu=16;
+			}
+
+			/*1・9・字牌　暗槓(アンカン)の場合*/
+			else if(mentsu.getNaki() == "暗カン" &&
+					mentsu.getHai1() == mentsu.getHai2()){
+				hu=32;
+			}
+		}
+
+		return hu;
+
 	}
 
 
