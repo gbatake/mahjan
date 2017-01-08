@@ -7,9 +7,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -84,6 +88,8 @@ public class MainController  implements Initializable {
 	//チェックボックス
 	@FXML CheckBox checkbox_reach = new CheckBox();
 	@FXML CheckBox checkbox_one = new CheckBox();
+
+	@FXML TextArea textarea_result = new TextArea();
 
 	//サブ画面用パラメータ
 	private String[] param = new String[100];
@@ -939,9 +945,72 @@ public class MainController  implements Initializable {
 		System.out.println("calc");
 		TeHai tehai = new TeHai();
 
+		//入力必須チェック‗未実装
+        Alert alert = new Alert( AlertType.ERROR , "" , ButtonType.OK);
+//        alert.setTitle( "エラー" );
+
+		/*場風*/
+        if(combo_fwind.getValue()==null){
+	        alert.getDialogPane().setContentText( "場風が選択されていません" );
+			alert.showAndWait().orElse( ButtonType.CANCEL );
+			return;
+		}
+
+		/*自風*/
+        if(combo_wind.getValue()==null){
+	        alert.getDialogPane().setContentText( "自風が選択されていません" );
+			alert.showAndWait().orElse( ButtonType.CANCEL );
+			return;
+		}
+
+		/*親・子*/
+        if(combo_PorC.getValue()==null){
+	        alert.getDialogPane().setContentText( "親・子が選択されていません" );
+			alert.showAndWait().orElse( ButtonType.CANCEL );
+			return;
+		}
+
+		/*待ち*/
+        if(combo_mati.getValue()==null){
+	        alert.getDialogPane().setContentText( "待ちが選択されていません" );
+			alert.showAndWait().orElse( ButtonType.CANCEL );
+			return;
+		}
+
+		/*和了*/
+        if(combo_agari.getValue()==null){
+	        alert.getDialogPane().setContentText( "和了が選択されていません" );
+			alert.showAndWait().orElse( ButtonType.CANCEL );
+			return;
+		}
+
+        /*牌*/
+        if(
+        		hai1.getSelectHaiId().equals("")||
+        		hai2.getSelectHaiId().equals("")||
+        		hai3.getSelectHaiId().equals("")||
+        		hai4.getSelectHaiId().equals("")||
+        		hai5.getSelectHaiId().equals("")||
+        		hai6.getSelectHaiId().equals("")||
+        		hai7.getSelectHaiId().equals("")||
+        		hai8.getSelectHaiId().equals("")||
+        		hai9.getSelectHaiId().equals("")||
+        		hai10.getSelectHaiId().equals("")||
+        		hai11.getSelectHaiId().equals("")||
+        		hai12.getSelectHaiId().equals("")||
+        		hai13.getSelectHaiId().equals("")||
+        		hai14.getSelectHaiId().equals("")
+        		){
+	        alert.getDialogPane().setContentText( "選択されていない牌があります" );
+			alert.showAndWait().orElse( ButtonType.CANCEL );
+			return;
+        }
+
+
 		//値をセット
 		tehai.setPorc(combo_PorC.getValue());
 		tehai.setWind(combo_wind.getValue());
+		tehai.setFwind(combo_fwind.getValue());
 		tehai.setDora(hai_dora.getSelectHaiId());
 		tehai.setUradora(hai_uradora.getSelectHaiId());
 		tehai.setReach(checkbox_reach.isSelected());
@@ -1013,7 +1082,7 @@ public class MainController  implements Initializable {
 		tehai.getMentsu4().setHai3(hai12.getSelectHaiId());
 
 		tehai.setAtama1(hai13.getSelectHaiId());
-		tehai.setAtama1(hai14.getSelectHaiId());
+		tehai.setAtama2(hai14.getSelectHaiId());
 
 		//デバッグログ
 		System.out.println(tehai.getPorc());
@@ -1052,6 +1121,9 @@ public class MainController  implements Initializable {
 		int hu_mentsu2=0;
 		int hu_mentsu3=0;
 		int hu_mentsu4=0;
+		int hu_atama=0;
+		int hu_mati=0;
+		int hu_result=0;
 
 		//副底（フーテイ）＝基本符
 		hu_hutei = 20;
@@ -1115,20 +1187,132 @@ public class MainController  implements Initializable {
 		}
 
 		hu_mentsu = hu_mentsu1 + hu_mentsu2 + hu_mentsu3 + hu_mentsu4;
+
+//デバッグ
 System.out.println(hu_mentsu1);
 System.out.println(hu_mentsu2);
 System.out.println(hu_mentsu3);
 System.out.println(hu_mentsu4);
 System.out.println(hu_mentsu);
 
+	//雀頭（ジャントウ＝アタマ） の種類による 加符点
+	System.out.println("場風:"+tehai.getFwind());
+	System.out.println("自風:"+tehai.getWind());
+	System.out.println("頭1:"+tehai.getAtama1());
+	System.out.println("頭2:"+tehai.getAtama2());
+
+	/*IDに変更‗場風*/
+	String fwind = "";
+	if(tehai.getFwind().equals("東")){
+		fwind = "ton";
+	}else if(tehai.getFwind().equals("南")){
+		fwind = "nan";
+	}else if(tehai.getFwind().equals("西")){
+		fwind = "sha";
+	}else if(tehai.getFwind().equals("北")){
+		fwind = "pei";
+	}
+
+	/*IDに変更‗自風*/
+	String wind = "";
+	if(tehai.getWind().equals("東")){
+		wind = "ton";
+	}else if(tehai.getWind().equals("南")){
+		wind = "nan";
+	}else if(tehai.getWind().equals("西")){
+		wind = "sha";
+	}else if(tehai.getWind().equals("北")){
+		wind = "pei";
+	}
+
+	//デバッグ
+	System.out.println(fwind);
+	System.out.println(wind);
+
+	/*場風の場合*/
+	if(tehai.getAtama1().equals(fwind)){
+		hu_atama += 2;
+	}
+
+	/*自風の場合*/
+	if(tehai.getAtama1().equals(wind)){
+		hu_atama += 2;
+	}
+
+	/*白・發・中 の場合*/
+	if(tehai.getAtama1().equals("haku") || tehai.getAtama1().equals("hatu") || tehai.getAtama1().equals("chun")){
+		hu_atama += 2;
+	}
+	//デバッグ
+	System.out.println(hu_atama);
 
 
+	//待ちの種類による 加符点
+
+	/*リャンメンの場合*/
+	if(combo_mati.getValue().equals("リャンメン")){
+		hu_mati = 0;
+	}
+
+	/*シャボの場合*/
+	else if(combo_mati.getValue().equals("シャボ")){
+		hu_mati = 0;
+	}
+	/*ペンチャンの場合*/
+	if(combo_mati.getValue().equals("ペンチャン")){
+		hu_mati = 2;
+	}
+
+	/*カンチャンの場合*/
+	if(combo_mati.getValue().equals("カンチャン")){
+		hu_mati = 2;
+	}
+
+	/*タンキの場合*/
+	if(combo_mati.getValue().equals("タンキ")){
+		hu_mati = 2;
+	}
+
+	/*ノベタンの場合*/
+	if(combo_mati.getValue().equals("ノベタン")){
+		hu_mati = 2;
+	}
+
+	//合計値
+	hu_result = hu_hutei + hu_agari + hu_mentsu + hu_atama + hu_mati;
+
+	//切り上げ‗未実装
 
 
+	//テキストエリアに結果表示
 
+	textarea_result.clear();
 
+	textarea_result.appendText("■副底（フーテイ）：");
+	textarea_result.appendText(String.valueOf(hu_hutei)+"\n");
 
+	textarea_result.appendText("■門前加符（メンゼンカフ）と ツモ符（ツモフ）：");
+	textarea_result.appendText(String.valueOf(hu_agari)+"\n");
 
+	textarea_result.appendText("■各面子（メンツ）の種類による 加符点：");
+	textarea_result.appendText(String.valueOf(hu_mentsu)+"\n");
+	textarea_result.appendText("　面子１：");
+	textarea_result.appendText(String.valueOf(hu_mentsu1)+"\n");
+	textarea_result.appendText("　面子２：");
+	textarea_result.appendText(String.valueOf(hu_mentsu2)+"\n");
+	textarea_result.appendText("　面子３：");
+	textarea_result.appendText(String.valueOf(hu_mentsu3)+"\n");
+	textarea_result.appendText("　面子４：");
+	textarea_result.appendText(String.valueOf(hu_mentsu4)+"\n");
+
+	textarea_result.appendText("■雀頭（ジャントウ＝アタマ） の種類による 加符点：");
+	textarea_result.appendText(String.valueOf(hu_atama)+"\n");
+
+	textarea_result.appendText("■待ちの種類による 加符点：");
+	textarea_result.appendText(String.valueOf(hu_mati)+"\n\n");
+
+	textarea_result.appendText("■結果：");
+	textarea_result.appendText(String.valueOf(hu_result)+"\n");
 
 	}
 

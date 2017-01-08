@@ -4,6 +4,7 @@ public class TeHai {
 
 	public String porc = "";
 	public String wind = "";
+	public String fwind = "";
 	public String dora = "";
 	public String uradora = "";
 	public Boolean reach = false;
@@ -21,6 +22,12 @@ public class TeHai {
 	}
 	public void setPorc(String porc) {
 		this.porc = porc;
+	}
+	public String getFwind() {
+		return fwind;
+	}
+	public void setFwind(String fwind) {
+		this.fwind = fwind;
 	}
 	public String getWind() {
 		return wind;

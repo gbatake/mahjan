@@ -4,6 +4,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -11,7 +12,7 @@
 
 <BorderPane prefHeight="112.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample_java001.MainController">
    <left>
-      <AnchorPane maxWidth="10000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="274.0" prefWidth="1122.0" BorderPane.alignment="CENTER">
+      <AnchorPane maxWidth="10000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="1122.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="button_hai1" layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#button_hai1_OnMouseCliceked" prefHeight="70.0" prefWidth="60.0">
                <graphic>
@@ -84,10 +85,10 @@
             </Button>
             <ComboBox fx:id="combo_PorC" layoutX="69.0" layoutY="66.0" prefHeight="25.0" prefWidth="70.0" />
             <ComboBox fx:id="combo_wind" layoutX="69.0" layoutY="37.0" prefHeight="25.0" prefWidth="70.0" />
-            <Label layoutX="30.0" layoutY="71.0" text="親・子" />
-            <Label layoutX="33.0" layoutY="41.0" text="自風" />
+            <Label layoutX="30.0" layoutY="71.0" text="*親・子" />
+            <Label layoutX="33.0" layoutY="41.0" text="*自風" />
             <ComboBox fx:id="combo_agari" layoutX="410.0" layoutY="67.0" prefHeight="25.0" prefWidth="70.0" />
-            <Label layoutX="380.0" layoutY="71.0" text="和了" />
+            <Label layoutX="380.0" layoutY="71.0" text="*和了" />
             <CheckBox fx:id="checkbox_one" layoutX="445.0" layoutY="12.0" mnemonicParsing="false" text="一発" />
             <Button fx:id="button_dora" layoutX="180.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#button_dora_OnMouseCliceked" prefHeight="70.0" prefWidth="60.0">
                <graphic>
@@ -118,15 +119,16 @@
             <Button fx:id="button_tii4" layoutX="726.0" layoutY="177.0" maxHeight="0.0" maxWidth="0.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#button_tii4_OnMouseCliceked" prefHeight="25.0" prefWidth="50.0" text="チー" />
             <Button fx:id="button_akan4" layoutX="671.0" layoutY="205.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#button_akan4_OnMouseCliceked" prefHeight="25.0" prefWidth="50.0" text="暗カン" />
             <Button fx:id="button_mkan4" layoutX="726.0" layoutY="205.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#button_mkan4_OnMouseCliceked" prefHeight="25.0" prefWidth="50.0" text="明カン" />
-            <Button fx:id="button_calc" layoutX="929.0" layoutY="177.0" mnemonicParsing="false" onMouseClicked="#button_calc_OnMouseCliceked" prefHeight="56.0" prefWidth="97.0" text="計算">
+            <Button fx:id="button_calc" layoutX="929.0" layoutY="190.0" mnemonicParsing="false" onMouseClicked="#button_calc_OnMouseCliceked" prefHeight="56.0" prefWidth="97.0" text="計算">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
             <ComboBox fx:id="combo_fwind" layoutX="69.0" layoutY="8.0" prefHeight="25.0" prefWidth="70.0" />
-            <Label layoutX="31.0" layoutY="12.0" text="場風" />
+            <Label layoutX="31.0" layoutY="12.0" text="*場風" />
             <ComboBox fx:id="combo_mati" layoutX="410.0" layoutY="37.0" prefHeight="25.0" prefWidth="97.0" />
-            <Label layoutX="381.0" layoutY="41.0" text="待ち" />
+            <Label layoutX="381.0" layoutY="41.0" text="*待ち" />
+            <TextArea fx:id="textarea_result" layoutX="15.0" layoutY="262.0" prefHeight="151.0" prefWidth="745.0" />
          </children>
       </AnchorPane>
    </left>
