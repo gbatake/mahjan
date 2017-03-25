@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample_java001.SelectController">
+   <top>
+      <AnchorPane prefHeight="414.0" prefWidth="1143.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="bt_man1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man1_OnMouseClicked" onMouseClicked="#bt_man1_OnMouseClicked" prefHeight="70.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fx:id="imv_man1" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_man2" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man2_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_man2" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_man3" layoutX="150.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man3_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_man3" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_man4" layoutX="220.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man4_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_man4" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_man5" layoutX="290.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man5_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_man5" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_man6" layoutX="360.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man6_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_man6" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_man7" layoutX="430.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man7_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_man7" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_man8" layoutX="500.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man8_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_man8" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_man9" layoutX="570.0" layoutY="10.0" mnemonicParsing="false" onAction="#bt_man9_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_man9" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin1" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin1_OnMouseClicked" onMouseClicked="#bt_man1_OnMouseClicked" prefHeight="70.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin1" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin2" layoutX="80.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin2_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin2" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin3" layoutX="150.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin3_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin3" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin4" layoutX="220.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin4_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin4" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin5" layoutX="290.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin5_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin5" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin6" layoutX="360.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin6_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin6" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin7" layoutX="430.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin7_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin7" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin8" layoutX="500.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin8_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin8" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pin9" layoutX="570.0" layoutY="90.0" mnemonicParsing="false" onAction="#bt_pin9_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pin9" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou1" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou1_OnMouseClicked" onMouseClicked="#bt_man1_OnMouseClicked" prefHeight="70.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou1" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou2" layoutX="80.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou2_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou2" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou3" layoutX="150.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou3_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou3" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou4" layoutX="220.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou4_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou4" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou5" layoutX="290.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou5_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou5" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou6" layoutX="360.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou6_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou6" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou7" layoutX="430.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou7_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou7" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou8" layoutX="500.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou8_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou8" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sou9" layoutX="570.0" layoutY="170.0" mnemonicParsing="false" onAction="#bt_sou9_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sou9" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_haku" layoutX="10.0" layoutY="330.0" mnemonicParsing="false" onAction="#bt_haku_OnMouseClicked" onMouseClicked="#bt_man1_OnMouseClicked" prefHeight="70.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fx:id="imv_haku" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_hatu" layoutX="80.0" layoutY="330.0" mnemonicParsing="false" onAction="#bt_hatu_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_hatu" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_chun" layoutX="150.0" layoutY="330.0" mnemonicParsing="false" onAction="#bt_chun_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_chun" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_ton" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#bt_ton_OnMouseClicked" onMouseClicked="#bt_man1_OnMouseClicked" prefHeight="70.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fx:id="imv_ton" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_nan" layoutX="80.0" layoutY="250.0" mnemonicParsing="false" onAction="#bt_nan_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_nan" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_sha" layoutX="150.0" layoutY="250.0" mnemonicParsing="false" onAction="#bt_sha_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_sha" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_pei" layoutX="220.0" layoutY="250.0" mnemonicParsing="false" onAction="#bt_pei_OnMouseClicked" prefHeight="70.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fx:id="imv_pei" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
